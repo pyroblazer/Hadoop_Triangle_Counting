@@ -1,0 +1,253 @@
+g13515002@cluster-hadoop-wenny-m:~/pat-hadoop$ ./run.sh
+18/11/19 08:10:21 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.10-hadoop2
+18/11/19 08:10:25 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.10-hadoop2
+Deleted /user/wennyyustalim/temp/first-mapreduce
+18/11/19 08:10:28 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.10-hadoop2
+rm: cannot remove 'TriangleTypePartition*.class': No such file or directory
+rm: cannot remove 'LongPair*.class': No such file or directory
+Note: ClosedTripletCount.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+18/11/19 08:10:35 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.10-hadoop2
+18/11/19 08:10:36 INFO client.RMProxy: Connecting to ResourceManager at cluster-hadoop-wenny-m/10.140.0.2:8032
+18/11/19 08:10:37 INFO input.FileInputFormat: Total input files to process : 1
+18/11/19 08:10:37 INFO mapreduce.JobSubmitter: number of splits:1
+18/11/19 08:10:37 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1542552664496_0008
+18/11/19 08:10:38 INFO impl.YarnClientImpl: Submitted application application_1542552664496_0008
+18/11/19 08:10:38 INFO mapreduce.Job: The url to track the job: http://cluster-hadoop-wenny-m:8088/proxy/application_1542552664496_0008/
+18/11/19 08:10:38 INFO mapreduce.Job: Running job: job_1542552664496_0008
+18/11/19 08:10:46 INFO mapreduce.Job: Job job_1542552664496_0008 running in uber mode : false
+18/11/19 08:10:46 INFO mapreduce.Job:  map 0% reduce 0%
+18/11/19 08:10:52 INFO mapreduce.Job:  map 100% reduce 0%
+18/11/19 08:11:02 INFO mapreduce.Job:  map 100% reduce 25%
+18/11/19 08:11:03 INFO mapreduce.Job:  map 100% reduce 50%
+18/11/19 08:11:05 INFO mapreduce.Job:  map 100% reduce 100%
+18/11/19 08:11:06 INFO mapreduce.Job: Job job_1542552664496_0008 completed successfully
+18/11/19 08:11:06 INFO mapreduce.Job: Counters: 50
+  File System Counters
+    FILE: Number of bytes read=426
+    FILE: Number of bytes written=1484977
+    FILE: Number of read operations=0
+    FILE: Number of large read operations=0
+    FILE: Number of write operations=0
+    HDFS: Number of bytes read=214
+    HDFS: Number of bytes written=174
+    HDFS: Number of read operations=43
+    HDFS: Number of large read operations=0
+    HDFS: Number of write operations=24
+  Job Counters 
+    Killed reduce tasks=1
+    Launched map tasks=1
+    Launched reduce tasks=8
+    Data-local map tasks=1
+    Total time spent by all maps in occupied slots (ms)=14872
+    Total time spent by all reduces in occupied slots (ms)=264628
+    Total time spent by all map tasks (ms)=3718
+    Total time spent by all reduce tasks (ms)=66157
+    Total vcore-milliseconds taken by all map tasks=3718
+    Total vcore-milliseconds taken by all reduce tasks=66157
+    Total megabyte-milliseconds taken by all map tasks=7614464
+    Total megabyte-milliseconds taken by all reduce tasks=135489536
+  Map-Reduce Framework
+    Map input records=21
+    Map output records=21
+    Map output bytes=336
+    Map output materialized bytes=426
+    Input split bytes=131
+    Combine input records=0
+    Combine output records=0
+    Reduce input groups=6
+    Reduce shuffle bytes=426
+    Reduce input records=21
+    Reduce output records=29
+    Spilled Records=42
+    Shuffled Maps =8
+    Failed Shuffles=0
+    Merged Map outputs=8
+    GC time elapsed (ms)=1936
+    CPU time spent (ms)=6650
+    Physical memory (bytes) snapshot=2055200768
+    Virtual memory (bytes) snapshot=31376850944
+    Total committed heap usage (bytes)=1883242496
+  Shuffle Errors
+    BAD_ID=0
+    CONNECTION=0
+    IO_ERROR=0
+    WRONG_LENGTH=0
+    WRONG_MAP=0
+    WRONG_REDUCE=0
+  File Input Format Counters 
+    Bytes Read=83
+  File Output Format Counters 
+    Bytes Written=174
+18/11/19 08:11:07 INFO client.RMProxy: Connecting to ResourceManager at cluster-hadoop-wenny-m/10.140.0.2:8032
+18/11/19 08:11:07 INFO input.FileInputFormat: Total input files to process : 8
+18/11/19 08:11:07 WARN hdfs.DataStreamer: Caught exception
+java.lang.InterruptedException
+  at java.lang.Object.wait(Native Method)
+  at java.lang.Thread.join(Thread.java:1252)
+  at java.lang.Thread.join(Thread.java:1326)
+  at org.apache.hadoop.hdfs.DataStreamer.closeResponder(DataStreamer.java:973)
+  at org.apache.hadoop.hdfs.DataStreamer.endBlock(DataStreamer.java:624)
+  at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:801)
+18/11/19 08:11:07 WARN hdfs.DataStreamer: Caught exception
+java.lang.InterruptedException
+  at java.lang.Object.wait(Native Method)
+  at java.lang.Thread.join(Thread.java:1252)
+  at java.lang.Thread.join(Thread.java:1326)
+  at org.apache.hadoop.hdfs.DataStreamer.closeResponder(DataStreamer.java:973)
+  at org.apache.hadoop.hdfs.DataStreamer.endBlock(DataStreamer.java:624)
+  at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:801)
+18/11/19 08:11:07 INFO mapreduce.JobSubmitter: number of splits:8
+18/11/19 08:11:07 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1542552664496_0009
+18/11/19 08:11:07 INFO impl.YarnClientImpl: Submitted application application_1542552664496_0009
+18/11/19 08:11:07 INFO mapreduce.Job: The url to track the job: http://cluster-hadoop-wenny-m:8088/proxy/application_1542552664496_0009/
+18/11/19 08:11:07 INFO mapreduce.Job: Running job: job_1542552664496_0009
+18/11/19 08:11:15 INFO mapreduce.Job: Job job_1542552664496_0009 running in uber mode : false
+18/11/19 08:11:15 INFO mapreduce.Job:  map 0% reduce 0%
+18/11/19 08:11:25 INFO mapreduce.Job:  map 13% reduce 0%
+18/11/19 08:11:26 INFO mapreduce.Job:  map 25% reduce 0%
+18/11/19 08:11:27 INFO mapreduce.Job:  map 38% reduce 0%
+18/11/19 08:11:28 INFO mapreduce.Job:  map 75% reduce 0%
+18/11/19 08:11:29 INFO mapreduce.Job:  map 100% reduce 0%
+18/11/19 08:11:37 INFO mapreduce.Job:  map 100% reduce 13%
+18/11/19 08:11:38 INFO mapreduce.Job:  map 100% reduce 25%
+18/11/19 08:11:40 INFO mapreduce.Job:  map 100% reduce 50%
+18/11/19 08:11:42 INFO mapreduce.Job:  map 100% reduce 88%
+18/11/19 08:11:43 INFO mapreduce.Job:  map 100% reduce 100%
+18/11/19 08:11:43 INFO mapreduce.Job: Job job_1542552664496_0009 completed successfully
+18/11/19 08:11:43 INFO mapreduce.Job: Counters: 53
+  File System Counters
+    FILE: Number of bytes read=280
+    FILE: Number of bytes written=2640968
+    FILE: Number of read operations=0
+    FILE: Number of large read operations=0
+    FILE: Number of write operations=0
+    HDFS: Number of bytes read=1350
+    HDFS: Number of bytes written=44
+    HDFS: Number of read operations=64
+    HDFS: Number of large read operations=0
+    HDFS: Number of write operations=24
+  Job Counters 
+    Killed map tasks=1
+    Killed reduce tasks=1
+    Launched map tasks=8
+    Launched reduce tasks=8
+    Other local map tasks=2
+    Data-local map tasks=5
+    Rack-local map tasks=1
+    Total time spent by all maps in occupied slots (ms)=316196
+    Total time spent by all reduces in occupied slots (ms)=277472
+    Total time spent by all map tasks (ms)=79049
+    Total time spent by all reduce tasks (ms)=69368
+    Total vcore-milliseconds taken by all map tasks=79049
+    Total vcore-milliseconds taken by all reduce tasks=69368
+    Total megabyte-milliseconds taken by all map tasks=161892352
+    Total megabyte-milliseconds taken by all reduce tasks=142065664
+  Map-Reduce Framework
+    Map input records=29
+    Map output records=29
+    Map output bytes=174
+    Map output materialized bytes=616
+    Input split bytes=1176
+    Combine input records=0
+    Combine output records=0
+    Reduce input groups=15
+    Reduce shuffle bytes=616
+    Reduce input records=29
+    Reduce output records=11
+    Spilled Records=58
+    Shuffled Maps =64
+    Failed Shuffles=0
+    Merged Map outputs=64
+    GC time elapsed (ms)=3736
+    CPU time spent (ms)=12220
+    Physical memory (bytes) snapshot=5207035904
+    Virtual memory (bytes) snapshot=55729123328
+    Total committed heap usage (bytes)=4989648896
+  Shuffle Errors
+    BAD_ID=0
+    CONNECTION=0
+    IO_ERROR=0
+    WRONG_LENGTH=0
+    WRONG_MAP=0
+    WRONG_REDUCE=0
+  File Input Format Counters 
+    Bytes Read=174
+  File Output Format Counters 
+    Bytes Written=44
+18/11/19 08:11:43 INFO client.RMProxy: Connecting to ResourceManager at cluster-hadoop-wenny-m/10.140.0.2:8032
+18/11/19 08:11:43 INFO input.FileInputFormat: Total input files to process : 8
+18/11/19 08:11:43 INFO mapreduce.JobSubmitter: number of splits:8
+18/11/19 08:11:44 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1542552664496_0010
+18/11/19 08:11:44 INFO impl.YarnClientImpl: Submitted application application_1542552664496_0010
+18/11/19 08:11:44 INFO mapreduce.Job: The url to track the job: http://cluster-hadoop-wenny-m:8088/proxy/application_1542552664496_0010/
+18/11/19 08:11:44 INFO mapreduce.Job: Running job: job_1542552664496_0010
+18/11/19 08:11:52 INFO mapreduce.Job: Job job_1542552664496_0010 running in uber mode : false
+18/11/19 08:11:52 INFO mapreduce.Job:  map 0% reduce 0%
+18/11/19 08:12:01 INFO mapreduce.Job:  map 13% reduce 0%
+18/11/19 08:12:02 INFO mapreduce.Job:  map 25% reduce 0%
+18/11/19 08:12:03 INFO mapreduce.Job:  map 38% reduce 0%
+18/11/19 08:12:04 INFO mapreduce.Job:  map 63% reduce 0%
+18/11/19 08:12:05 INFO mapreduce.Job:  map 100% reduce 0%
+18/11/19 08:12:11 INFO mapreduce.Job:  map 100% reduce 100%
+18/11/19 08:12:11 INFO mapreduce.Job: Job job_1542552664496_0010 completed successfully
+18/11/19 08:12:11 INFO mapreduce.Job: Counters: 51
+  File System Counters
+    FILE: Number of bytes read=204
+    FILE: Number of bytes written=1484486
+    FILE: Number of read operations=0
+    FILE: Number of large read operations=0
+    FILE: Number of write operations=0
+    HDFS: Number of bytes read=1228
+    HDFS: Number of bytes written=9
+    HDFS: Number of read operations=29
+    HDFS: Number of large read operations=0
+    HDFS: Number of write operations=3
+  Job Counters 
+    Killed map tasks=1
+    Launched map tasks=8
+    Launched reduce tasks=1
+    Other local map tasks=2
+    Data-local map tasks=6
+    Total time spent by all maps in occupied slots (ms)=303928
+    Total time spent by all reduces in occupied slots (ms)=14540
+    Total time spent by all map tasks (ms)=75982
+    Total time spent by all reduce tasks (ms)=3635
+    Total vcore-milliseconds taken by all map tasks=75982
+    Total vcore-milliseconds taken by all reduce tasks=3635
+    Total megabyte-milliseconds taken by all map tasks=155611136
+    Total megabyte-milliseconds taken by all reduce tasks=7444480
+  Map-Reduce Framework
+    Map input records=11
+    Map output records=11
+    Map output bytes=176
+    Map output materialized bytes=246
+    Input split bytes=1184
+    Combine input records=0
+    Combine output records=0
+    Reduce input groups=1
+    Reduce shuffle bytes=246
+    Reduce input records=11
+    Reduce output records=1
+    Spilled Records=22
+    Shuffled Maps =8
+    Failed Shuffles=0
+    Merged Map outputs=8
+    GC time elapsed (ms)=1913
+    CPU time spent (ms)=6120
+    Physical memory (bytes) snapshot=3797245952
+    Virtual memory (bytes) snapshot=31326650368
+    Total committed heap usage (bytes)=3650617344
+  Shuffle Errors
+    BAD_ID=0
+    CONNECTION=0
+    IO_ERROR=0
+    WRONG_LENGTH=0
+    WRONG_MAP=0
+    WRONG_REDUCE=0
+  File Input Format Counters 
+    Bytes Read=44
+  File Output Format Counters 
+    Bytes Written=9
+18/11/19 08:12:13 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.10-hadoop2
+Result  2

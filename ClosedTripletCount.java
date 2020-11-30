@@ -1,6 +1,6 @@
 import java.io.IOException;
-//import java.io.DataInput;
-//import java.io.DataOutput;
+import java.io.DataInput;
+import java.io.DataOutput;
 import java.util.*;
 
 import org.apache.hadoop.fs.Path;
@@ -19,11 +19,16 @@ public class ClosedTripletCount extends Configured implements Tool {
                 long u = Long.parseLong(pair[0]);
                 long v = Long.parseLong(pair[1]);
 
-                if (u < v) {
-                    context.write(new LongWritable(u), new LongWritable(v));
-                } else {
-                    context.write(new LongWritable(v), new LongWritable(u));
-                }
+                context.write(new LongWritable(u), new LongWritable(v));
+                context.write(new LongWritable(v), new LongWritable(u));
+
+                // if (u < v) {
+                //     context.write(new LongWritable(u), new LongWritable(v));
+                //     context.write(new LongWritable(v), new LongWritable(u));
+                // } else {
+                //     context.write(new LongWritable(v), new LongWritable(u));
+                //     context.write(new LongWritable(u), new LongWritable(v));
+                // }
             }
         }
     }
@@ -91,15 +96,13 @@ public class ClosedTripletCount extends Configured implements Tool {
             long sum = 0;
             for (LongWritable value : values) {
                 sum += value.get();
-                // context.write(new Text("Result"), new LongWritable(sum));
             }
             context.write(new Text("Result"), new LongWritable(sum));
         }
     }
 
     public int run(String[] args) throws Exception {
-
-        Job jobOne = Job.getInstance(getConf());
+        Job jobOne = new Job(getConf());
         jobOne.setJobName("first-mapreduce");
 
         jobOne.setJar("triplet.jar");
@@ -115,10 +118,9 @@ public class ClosedTripletCount extends Configured implements Tool {
         jobOne.setReducerClass(FirstReducer.class);
 
         FileInputFormat.addInputPath(jobOne, new Path(args[0]));
-        //FileInputFormat.addInputPath(jobOne, new Path(".\\temp\\input"));
-        FileOutputFormat.setOutputPath(jobOne, new Path(".\\temp\\first-mapreduce"));
+        FileOutputFormat.setOutputPath(jobOne, new Path("./temp/first-mapreduce"));
 
-        Job jobTwo = Job.getInstance(getConf());
+        Job jobTwo = new Job(getConf());
         jobTwo.setJobName("second-mapreduce");
 
         jobTwo.setJar("triplet.jar");
@@ -133,10 +135,10 @@ public class ClosedTripletCount extends Configured implements Tool {
         jobTwo.setMapperClass(SecondMapper.class);
         jobTwo.setReducerClass(SecondReducer.class);
 
-        FileInputFormat.addInputPath(jobTwo, new Path(".\\temp\\first-mapreduce"));
-        FileOutputFormat.setOutputPath(jobTwo, new Path(".\\temp\\second-mapreduce"));
+        FileInputFormat.addInputPath(jobTwo, new Path("./temp/first-mapreduce"));
+        FileOutputFormat.setOutputPath(jobTwo, new Path("./temp/second-mapreduce"));
 
-        Job jobThree = Job.getInstance(getConf());
+        Job jobThree = new Job(getConf());
         jobThree.setJobName("third-mapreduce");
         jobThree.setNumReduceTasks(1);
 
@@ -152,8 +154,8 @@ public class ClosedTripletCount extends Configured implements Tool {
         jobThree.setMapperClass(ThirdMapper.class);
         jobThree.setReducerClass(ThirdReducer.class);
 
-        FileInputFormat.addInputPath(jobThree, new Path(".\\temp\\second-mapreduce"));
-        FileOutputFormat.setOutputPath(jobThree, new Path(".\\temp\\output"));
+        FileInputFormat.addInputPath(jobThree, new Path("./temp/second-mapreduce"));
+        FileOutputFormat.setOutputPath(jobThree, new Path(args[1]));
 
         int ret = jobOne.waitForCompletion(true) ? 0 : 1;
         if (ret == 0)

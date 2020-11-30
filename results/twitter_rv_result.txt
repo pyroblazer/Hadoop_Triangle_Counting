@@ -1,0 +1,71 @@
+g13515002@cluster-hadoop-wenny-m:~/pat-hadoop$ ./run.sh
+...
+18/11/15 03:17:30 INFO input.FileInputFormat: Total input files to process : 1
+18/11/15 03:17:30 INFO mapreduce.JobSubmitter: number of splits:195
+18/11/15 03:17:31 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1542174845531_0041
+18/11/15 03:17:31 INFO impl.YarnClientImpl: Submitted application application_1542174845531_0041
+18/11/15 03:17:31 INFO mapreduce.Job: The url to track the job: http://cluster-hadoop-wenny-m:8088/proxy/application_1542174845531_0041/
+18/11/15 03:17:31 INFO mapreduce.Job: Running job: job_1542174845531_0041
+18/11/15 03:17:40 INFO mapreduce.Job: Job job_1542174845531_0041 running in uber mode : false
+18/11/15 03:17:40 INFO mapreduce.Job:  map 0% reduce 0%
+...
+18/11/15 03:58:40 INFO mapreduce.Job:  map 100% reduce 58%
+18/11/15 03:58:40 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000005_0, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000005_0 Timed out after 600 secs
+Container killed by the ApplicationMaster.
+Sent signal OUTPUT_THREAD_DUMP (SIGQUIT) to pid 12178 as user g13515002 for container container_1542174845531_0041_01_000202, result=success
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/11/15 03:59:04 INFO mapreduce.Job:  map 100% reduce 60%
+18/11/15 03:59:09 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000004_0, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000004_0 Timed out after 600 secs
+18/11/15 03:59:09 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000002_0, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000002_0 Timed out after 600 secs
+18/11/15 03:59:10 INFO mapreduce.Job:  map 100% reduce 43%
+...
+18/11/15 04:01:04 INFO mapreduce.Job:  map 100% reduce 52%
+18/11/15 04:01:08 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000003_0, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000003_0 Timed out after 600 secs
+18/11/15 04:01:09 INFO mapreduce.Job:  map 100% reduce 44%
+...
+18/11/15 04:04:45 INFO mapreduce.Job:  map 100% reduce 67%
+18/11/15 04:08:39 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000007_0, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000007_0 Timed out after 600 secs
+Container killed by the ApplicationMaster.
+Sent signal OUTPUT_THREAD_DUMP (SIGQUIT) to pid 12282 as user g13515002 for container container_1542174845531_0041_01_000204, result=success
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/11/15 04:08:40 INFO mapreduce.Job:  map 100% reduce 58%
+...
+18/11/15 04:12:41 INFO mapreduce.Job:  map 68% reduce 8%
+18/11/15 04:12:41 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000005_1, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000005_1 Timed out after 600 secs
+Container killed by the ApplicationMaster.
+Sent signal OUTPUT_THREAD_DUMP (SIGQUIT) to pid 13638 as user g13515002 for container container_1542174845531_0041_01_000205, result=success
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/11/15 04:12:48 INFO mapreduce.Job:  map 69% reduce 8%
+...
+18/11/15 04:17:25 INFO mapreduce.Job:  map 83% reduce 8%
+18/11/15 04:17:40 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000003_1, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000003_1 Timed out after 600 secs
+18/11/15 04:17:41 INFO mapreduce.Job:  map 83% reduce 0%
+...
+18/11/15 04:26:59 INFO mapreduce.Job:  map 100% reduce 67%
+
+18/11/15 04:34:12 INFO mapreduce.Job:  map 55% reduce 42%
+...
+18/11/15 04:35:00 INFO mapreduce.Job:  map 57% reduce 17%
+18/11/15 04:35:40 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000005_2, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000005_2 Timed out after 600 secs
+18/11/15 04:35:41 INFO mapreduce.Job:  map 57% reduce 8%
+...
+18/11/15 04:36:38 INFO mapreduce.Job:  map 60% reduce 8%
+18/11/15 04:36:40 INFO mapreduce.Job: Task Id : attempt_1542174845531_0041_r_000003_2, Status : FAILED
+AttemptID:attempt_1542174845531_0041_r_000003_2 Timed out after 600 secs
+18/11/15 04:36:41 INFO mapreduce.Job:  map 60% reduce 0%
+...
+18/11/15 04:37:21 INFO mapreduce.Job:  map 63% reduce 0%
